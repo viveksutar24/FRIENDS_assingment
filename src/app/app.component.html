@@ -1,0 +1,16 @@
+{{ title }}
+<br />
+<br />
+<br />
+<input type="text" value="" [(ngModel)]="list">
+
+{{ Friends }}
+
+<button (click)="add()">Add</button>
+
+<ul>
+  <li *ngFor="let vivek of Friends;let i =index;" value="{{ vivek }}">{{ i+1 }} {{ vivek }} <button
+      (click)="delete(i)">x</button></li>
+</ul>
+
+<p *ngIf="this.Friends.length===0" style="color: red;">You dont have any friends</p>
